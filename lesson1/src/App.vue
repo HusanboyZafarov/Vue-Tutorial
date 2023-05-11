@@ -4,8 +4,8 @@
 </template>
 
 <script>
-import PostForm from './components/PostForm.vue'
-import PostList from './components/PostList.vue'
+import PostForm from '@/components/PostForm'
+import PostList from '@/components/PostList'
 
 export default {
     components: {
