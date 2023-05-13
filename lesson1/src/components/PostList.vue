@@ -1,51 +1,52 @@
 <template>
+  <div>
     <div>
-        <h3>List of users</h3>
+      <h3>List of users</h3>
     </div>
     <div>
-        <post-item v-for="(post) in posts" :post="post">
-        </post-item>
+      <PostItem v-for="post in posts" :post="post" v-bind:key="post.id" />
     </div>
+  </div>
 </template>
 
 <script>
-import PostItem from '@/components/PostItem'
+import PostItem from "@/components/PostItem";
 
 export default {
-    component: {
-        PostItem
+  components: {
+    PostItem,
+  },
+  props: {
+    posts: {
+      type: Array,
+      required: true,
     },
-    props: {
-        posts: {
-            type: Array,
-            required: true
-        }
-    }
-}
+  },
+};
 </script>
 
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    text-decoration: none;
-    box-sizing: border-box;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 .post {
-    padding: 15px;
-    border: 2px solid teal;
-    margin: 10px;
+  padding: 15px;
+  border: 2px solid teal;
+  margin: 10px;
 }
 
 .input,
-button {
-    display: block;
-    padding: 15px;
-    width: 90%;
-    margin: 10px;
-    border: 2px solid teal;
+.btn {
+  display: block;
+  padding: 15px;
+  width: 90%;
+  margin: 10px;
+  border: 2px solid teal;
 }
 </style>
