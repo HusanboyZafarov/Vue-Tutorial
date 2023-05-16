@@ -1,11 +1,13 @@
 <template>
   <div>
-    <input type="text" />
+    <input class="input" type="text" />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "my-input",
+};
 </script>
 
 <style>
